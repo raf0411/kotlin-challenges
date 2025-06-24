@@ -8,7 +8,7 @@ data class Post(val id: Int, val content: String, val tags: List<String>)
 //}
 
 // shorter
-fun extractUniqueTags(post: List<Post>): List<String> = 
+fun extractUniqueTags(post: List<Post>): List<String> =
     post.flatMap { it.tags }.distinct()
 
 fun main() {
@@ -21,6 +21,4 @@ fun main() {
 
     val uniqueTags = extractUniqueTags(posts)
     println("All unique tags used: $uniqueTags")
-    // The order doesn't matter, but the content does.
-    // Expected: [kotlin, android, development, oop, ui, jetpack, functional]
 }
