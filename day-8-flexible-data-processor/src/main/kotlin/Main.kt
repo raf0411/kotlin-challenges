@@ -9,18 +9,14 @@ fun main() {
     val doubledReadings = processNumbers(sensorReadings) { reading ->
         reading * 2
     }
-
-    println("Doubled Readings: $doubledReadings")
-
-
     val squaredReadings = processNumbers(sensorReadings) { reading ->
         reading * reading
     }
-    println("Squared Readings: $squaredReadings")
-
-
     val remainderReadings = processNumbers(sensorReadings) { reading ->
         reading % 3
     }
+
+    println("Doubled Readings: $doubledReadings")
+    println("Squared Readings: $squaredReadings")
     println("Remainder (when divided by 3): $remainderReadings")
 }
